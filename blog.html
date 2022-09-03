@@ -46,66 +46,35 @@
         </div>
     </header>
 
+    <!-- main section -->
     <main>
 
-        <!-- categories section -->
-        <section class="categories-section">
-            <div class="container">
+        <!-- difference between var let and const -->
+        <section class="var-let-const-section my-5">
+            <div class="container bg-white rounded p-5">
                 <div class="row">
                     <div class="col">
-                        <div id="categories" class="categories d-flex flex-column align-items-center flex-md-row d-md-flex justify-content-md-between my-4"></div>
+                        <h1 class="text-center mb-4">Difference between var, let and const</h1>
+                        <ol>
+                            <li class="mb-3">
+                                The scope of a var variable is functional scope. The scope of a let variable is block scope. The scope of a const variable is block scope.
+                            </li>
+                            <li class="mb-3">
+                                var can be updated and re-declared into the scope. let can be updated but cannot be re-declared into the scope. const cannot be updated or re-declared into the scope.
+                            </li>
+                            <li class="mb-3">
+                                var can be declared without initialization. let can be declared without initialization. const cannot be declared without initialization.
+                            </li>
+                            <li>
+                                var can be accessed without initialization as its default value is "undefined". let cannot be accessed without initialization otherwise it will give "referenceError". const cannot be accessed without initialization, as it cannot be declared without initialization.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- category items section -->
-        <section class="categoryItems-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <p id="item-info" class="item-info">PLease select a category to see news</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- spinner -->
-        <div id="spinner" class="spinner">
-            <div class="spinner-border text-info" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
-
-        <!-- news items section -->
-        <section class="news-items-section">
-            <div class="container bgColor">
-                <div class="row">
-                    <div id="items" class="col"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">News Details</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div id="modal-body" class="modal-body">
-                        
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
+        
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
