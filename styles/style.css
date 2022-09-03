@@ -37,3 +37,14 @@ body{
     margin: 30px 30px 30px 0;
 }
 
+/* category items section */
+.categoryItems-section .categoryItems{
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.categoryItems-section .item-info{
+    font-size: 18px;
+    padding: 20px;
+    margin: 20px 0;
+}

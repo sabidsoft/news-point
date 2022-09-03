@@ -9,6 +9,19 @@ fetch('https://openapi.programming-hero.com/api/news/categories')
             button.setAttribute('class', 'button')
             button.innerHTML = category.category_name
             categoriesDiv.appendChild(button)
+
+            document.getElementById(`${category.category_id}`).addEventListener('click', function(){
+                fetch(`https://openapi.programming-hero.com/api/news/category/${category.category_id}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        data.data.forEach(news => {
+                            console.log(news)
+                        })
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+            })
         })
     })
     .catch(err => {
