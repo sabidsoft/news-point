@@ -3,7 +3,7 @@ body{
     background-color: #F6F6F6;
 }
 
-/* header section css */
+/* header section */
 .custom_navbar{
     padding: 40px 0;
     border-bottom: 2px solid #CDCDCD;
@@ -27,7 +27,7 @@ body{
     color: #A3A3A3;
 }
 
-/* categories section css */
+/* categories section */
 .categories-section .categories .button{
     border: none;
     color: #858585;
@@ -36,3 +36,4 @@ body{
     line-height: 21px;
     margin: 30px 30px 30px 0;
 }
+
