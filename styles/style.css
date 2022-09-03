@@ -118,3 +118,9 @@ body{
     margin-left: 12px;
     margin-top: 12px;
 }
+
+/* spinner */
+.spinner{
+    display: none;
+    text-align: center;
+}

@@ -22,11 +22,20 @@ const getCategories = data => {
 // event handler
 const eventHandler = (category_id, category_name) => {
     document.getElementById(`${category_id}`).addEventListener('click', function(){
+        // show spinner
+        const spinnerDiv = document.getElementById('spinner')
+        spinnerDiv.style.display = 'block'
+
+        // empty previous news
         const itemsContainer = document.getElementById('items')
         itemsContainer.innerHTML = ''
+
         fetch(`https://openapi.programming-hero.com/api/news/category/${category_id}`)
             .then(res => res.json())
-            .then(data => getCategoryInfo(data.data, category_name))
+            .then(data => {
+                spinnerDiv.style.display = 'none'
+                getCategoryInfo(data.data, category_name)
+            })
             .catch(err => console.log(err))
     })
 }
@@ -99,4 +108,13 @@ const showModal = (author, published_date, title, total_view, rating, badge, ima
         <p class="fw-semibold">Author: <span class="fw-bold">${author === 'null' || author === '' ? 'Not found' : author}</span></p>
         <p class="fw-semibold">Published Date: <span class="fw-bold">${new Date(published_date).toDateString()}</span></p>
     `
+}
+
+// spinner function
+const spinner = (isLoading) => {
+    if(isLoading){
+        
+    }else{
+        
+    }
 }
