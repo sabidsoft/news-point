@@ -1,7 +1,11 @@
 // default news
 fetch('https://openapi.programming-hero.com/api/news/category/08')
     .then(res => res.json())
-    .then(data => showNews(data.data))
+    .then(data => {
+        const defaultNews = data.data
+        defaultNews.sort((a, b) => b.total_view - a.total_view)
+        showNews(defaultNews)
+    })
     .catch(err => alert(err.message))
 
 // fetch categories
@@ -53,13 +57,19 @@ const getCategoryInfo = (data, category_name) => {
         if(data.length === 0){
             itemElement.innerHTML = `No news found for category ${category_name}`
         }
-        data.forEach(newsId => {
-            fetch(`https://openapi.programming-hero.com/api/news/${newsId._id}`)
-                .then(res => res.json())
-                .then(data => showNews(data.data))
-                .catch(err => alert(err.message))
-        })
+        getCategoryId(data)
 }
+
+// get category id
+const getCategoryId = data => {
+    data.sort((a, b) => b.total_view - a.total_view).forEach(newsId => {
+        fetch(`https://openapi.programming-hero.com/api/news/${newsId._id}`)
+            .then(res => res.json())
+            .then(data => showNews(data.data))
+            .catch(err => alert(err.message))
+    })
+}
+
 
 // show news
 const showNews = newes => {
