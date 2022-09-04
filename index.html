@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Point</title>
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./ui-ux/favicon.png" type="image/x-icon">
+
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
@@ -65,7 +68,34 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <p id="item-info" class="item-info">PLease select a category to see news</p>
+                        <p id="item-info" class="item-info">PLease select a category to see specific news</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- sort section -->
+        <section class="mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="sort-section-container">
+                            <div class="left">
+                                <span class="label_dropdown">Sort By View: </span>
+                                <div class="dropdown c_dropdown">
+                                    <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Default
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Default</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button class="btn btn-primary me-2">Today's Pick</button>
+                                <button class="btn btn-outline-primary">Trending</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

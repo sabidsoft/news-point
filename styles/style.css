@@ -118,6 +118,23 @@ body{
     text-align: center;
 }
 
+/* dropdown css */
+.sort-section-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.label_dropdown{
+    font-size: 18px;
+}
+
+.c_dropdown{
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin-left: 16px;
+}
+
 /* mobile responsive */
 @media screen and (max-width: 768px) {
     /* news items section  */
@@ -143,6 +160,15 @@ body{
     }
 
     .news-items-section .author-info{
+        margin-bottom: 20px;
+    }
+
+    .sort-section-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sort-section-container .left{
         margin-bottom: 20px;
     }
 }
